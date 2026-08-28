@@ -460,4 +460,50 @@ rankingDiv.innerHTML = html;
 
 }
 
+async function enterLobby(){
+ 
+const name =
+document.getElementById("playerName").value;
+
+const avatar = 
+document.getElementById("avatar").value;
+
+if(name.trim() === ""){
+
+alert("Digite seu nome");
+
+return;
+
+} 
+
+try{
+
+await window.addDoc(
+
+window.collection(
+window.db,
+"participantes"
+ ),
+
+ {
+ nome: name,
+ avatar: avatar
+ }
+
+ );
+
+ alert(
+ "Você entrou na sala!"
+ );
+
+ }
+ catch(error){
+
+ console.error(error);
+
+ }
+
+ }
+
 window.startQuiz = startQuiz;
+window.enterLobby = enterLobby;
