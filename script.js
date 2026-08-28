@@ -461,8 +461,6 @@ rankingDiv.innerHTML = html;
 }
 
 async function enterLobby(){
-
-alert("Botão funcionando");
  
 const name =
 document.getElementById("playerName").value;
@@ -499,7 +497,7 @@ window.db,
  );
 
  document.getElementById("startScreen")
- classList.add("hidden");
+ .classList.add("hidden");
  
  document.getElementById("lobbyScreen")
  .classList.remove("hidden");
