@@ -461,6 +461,8 @@ rankingDiv.innerHTML = html;
 }
 
 async function enterLobby(){
+
+alert("Botão funcionando");
  
 const name =
 document.getElementById("playerName").value;
