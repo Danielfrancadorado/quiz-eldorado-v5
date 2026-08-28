@@ -1,5 +1,4 @@
-import { initializeApp } from
-"https://www.gstatic.com/firebasejs/10.13.2/firebase-app.js";
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.13.2/firebase-app.js";
 
 import {
   getFirestore,
@@ -8,12 +7,12 @@ import {
   getDocs,
   query,
   orderBy,
-  limit 
+  limit,
   onSnapshot
 } from "https://www.gstatic.com/firebasejs/10.13.2/firebase-firestore.js";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyCY8-9dL0g-fumrPTALntFgw8kRJKBArWY", 
+  apiKey: "AIzaSyCY8-9dL0g-fumrPTALntFgw8kRJKBArWY",
   authDomain: "quiz-eldorado.firebaseapp.com",
   projectId: "quiz-eldorado",
   storageBucket: "quiz-eldorado.firebasestorage.app",
