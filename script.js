@@ -498,6 +498,12 @@ window.db,
  "Você entrou na sala!"
  );
 
+ document.getElementById("startScreen")
+ classList.add("hidden");
+ 
+ document.getElementById("lobbyScreen")
+ .classList.remove("hidden");
+ 
  }
  catch(error){
 
