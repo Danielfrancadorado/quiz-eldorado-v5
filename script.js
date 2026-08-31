@@ -502,6 +502,8 @@ window.db,
  document.getElementById("lobbyScreen")
  .classList.remove("hidden");
  
+ loadParticipants();
+ 
  }
  catch(error){
 
@@ -510,6 +512,49 @@ window.db,
  }
 
  }
+
+function loadParticipants(){
+ 
+const participantList =
+document.getElementById("participantList");
+
+const participantCount =
+document.getElementById("participantCount");
+
+window.onSnapshot(
+
+window.collection(
+window.db,
+"participantes"
+), 
+
+(snapshot)=>{
+
+participantCount.innerText =
+"Participantes conectados: " +
+snapshot.size;
+
+let html = "";
+
+snapshot.forEach((doc)=>{
+
+const p = doc.data();
+
+html +=
+<p>
+${p.avatar} ${p.nome}
+</p>
+`;
+
+});
+
+participantList.innerHTML = html;
+
+}
+
+);
+
+}
 
 window.startQuiz = startQuiz;
 window.enterLobby = enterLobby;
