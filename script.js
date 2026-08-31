@@ -562,5 +562,33 @@ participantList.innerHTML = html;
 
 } 
 
+async function startForEveryone(){
+
+try{
+
+const quizRef =
+
+window.doc(
+window.db,
+"controle",
+"quiz"
+ );
+
+ await window.updateDoc(
+ quizRef,
+ {
+ status: "iniciado"
+ }
+ );
+
+ }
+ catch(error){
+  
+ console.error(error);
+
+ }
+
+ }
+ 
 window.startQuiz = startQuiz;
 window.enterLobby = enterLobby;
