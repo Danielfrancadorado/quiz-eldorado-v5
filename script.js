@@ -509,6 +509,8 @@ window.db,
  .classList.remove("hidden");
  
  loadParticipants();
+
+ listenQuizStart();
  
  }
  catch(error){
@@ -592,3 +594,4 @@ window.db,
  
 window.startQuiz = startQuiz;
 window.enterLobby = enterLobby;
+window.startForEveryone = startForEveryone;
