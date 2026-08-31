@@ -186,9 +186,15 @@ let timer;
 
 function startQuiz(){
 
-document.getElementById("startScreen").classList.add("hidden");
-document.getElementById("quizScreen").classList.remove("hidden");
+document.getElementById("startScreen")
+.classList.add("hidden");
 
+document.getElementById("lobbyScreen")
+ .classList.add("hidden");
+
+document.getElementById("quizScreen")
+.classList.remove("hidden");
+ 
 loadQuestion();
 
 }
