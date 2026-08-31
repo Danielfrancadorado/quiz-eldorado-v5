@@ -150,3 +150,15 @@ select{
     border-radius:10px;
 }
 `
+
+#participantList{
+    margin-top:20px;
+}    
+
+#participantList p{
+    background:white;
+    padding:10px;
+    margin:5px 0;
+    border-radius:10px;
+    font-size:20px;
+}    
