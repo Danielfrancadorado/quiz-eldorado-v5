@@ -162,3 +162,20 @@ select{
     border-radius:10px;
     font-size:20px;
 }    
+
+#startAllBtn{
+    display:block;
+    margin:25px auto;
+    padding:15px 40px;
+    font-size:20px;
+    font-weight:bold;
+    border:none;
+    border-radius:10px;
+    background:#0b8f3f;
+    color:white;
+    cursor:pointer;
+}
+
+#startAllBtn:hover{
+    background:#087532;
+}    
