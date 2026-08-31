@@ -515,7 +515,7 @@ window.db,
 
 function loadParticipants(){
  
-const participantList =
+const participantList = 
 document.getElementById("participantList");
 
 const participantCount =
@@ -526,35 +526,35 @@ window.onSnapshot(
 window.collection(
 window.db,
 "participantes"
-), 
+ ),
 
 (snapshot)=>{
 
 participantCount.innerText =
 "Participantes conectados: " +
-snapshot.size;
-
-let html = "";
+snapshot.size; 
+ 
+let html = ""; 
 
 snapshot.forEach((doc)=>{
 
 const p = doc.data();
 
-html +=
+html += `
 <p>
 ${p.avatar} ${p.nome}
 </p>
 `;
 
-});
+ });
 
 participantList.innerHTML = html;
-
-}
+ 
+} 
 
 );
 
-}
+} 
 
 window.startQuiz = startQuiz;
 window.enterLobby = enterLobby;
