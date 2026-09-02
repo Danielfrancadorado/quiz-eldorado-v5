@@ -186,3 +186,11 @@ select{
 .hidden{
     display:none;  
 }    
+
+#countdown{
+    font-size:60px;
+    font-weight:bold;
+    color:#0b8f3f;
+    text-align:center;
+    margin-top:20px;
+}
