@@ -523,12 +523,12 @@ window.db,
 
 function loadParticipants(){
  
-const participantList = 
+const participantList =
 document.getElementById("participantList");
 
 const participantCount =
 document.getElementById("participantCount");
-
+ 
 window.onSnapshot(
 
 window.collection(
@@ -554,16 +554,44 @@ ${p.avatar} ${p.nome}
 </p>
 `;
 
- });
+});
 
 participantList.innerHTML = html;
  
 } 
 
+); 
+
+}
+
+function listenQuizStart(){
+
+window.onSnapshot(
+
+window.doc(
+window.db,
+"controle",
+"quiz"
+ ),
+
+(docSnap)=>{
+ 
+if(!docSnap.exists()) return; 
+
+const data = docSnap.data();
+ 
+if(data.status === "iniciado"){
+ 
+startQuiz();
+ 
+} 
+
+}
+
 );
 
 } 
-
+ 
 async function startForEveryone(){
 
 try{
