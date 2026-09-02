@@ -580,9 +580,9 @@ if(!docSnap.exists()) return;
 
 const data = docSnap.data();
  
-if(data.status === "iniciado"){
+if(data.status === "contagem"){
  
-startQuiz();
+startCountdown();
  
 } 
 
@@ -591,7 +591,44 @@ startQuiz();
 );
 
 } 
+
+function startCountdown(){
  
+const countdown =
+document.getElementById("countdown");
+ 
+let time = 3;
+
+countdown.innerText = time;
+
+const interval = setInterval(()=>{
+
+time--;
+
+if(time > 0){
+
+countdown.innerText = time;
+
+}
+else if(time === 0){
+
+countdown.innerText = "🚀";
+
+ }
+else{
+
+clearInterval(interval);
+
+countdown.innerText = "";
+
+startQuiz();
+
+}
+ 
+},1000);
+
+}
+
 async function startForEveryone(){
 
 try{
@@ -607,7 +644,7 @@ window.db,
  await window.updateDoc(
  quizRef,
  {
- status: "iniciado"
+ status: "contagem"
  }
  );
 
