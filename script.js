@@ -687,6 +687,39 @@ console.error(error);
 
 }
 
+async function clearLobby(){
+
+try{
+
+const snapshot = await window.getDocs(
+
+window.collection(
+window.db,
+"participantes"
+)
+
+);
+
+for(const documentItem of snapshot.docs){
+
+await window.deleteDoc( 
+documentItem.ref
+);
+ 
+}
+
+alert("Sala limpa com sucesso!");
+
+}
+catch(error){
+
+console.error(error);
+
+}
+
+} 
+
 window.startQuiz = startQuiz;
 window.enterLobby = enterLobby;
 window.startForEveryone = startForEveryone;
+window.clearLobby = clearLobby;
