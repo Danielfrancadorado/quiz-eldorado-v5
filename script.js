@@ -303,7 +303,9 @@ finishQuiz();
 function finishQuiz(){
 
 saveScore(); 
-
+ 
+resetQuizControl();
+ 
 loadGlobalRanking();
 
 document.getElementById("quizScreen").classList.add("hidden");
@@ -656,7 +658,35 @@ window.db,
  }
 
  }
+
+async function resetQuizControl(){
+
+try{
+
+const quizRef =
+
+window.doc(
+window.db,
+"controle",
+"quiz"
+ );
+
+await window.updateDoc(
+quizRef,
+{
+status: "aguardando"
+}
+);
+
+}
+catch(error){
+
+console.error(error);
  
+}
+
+}
+
 window.startQuiz = startQuiz;
 window.enterLobby = enterLobby;
 window.startForEveryone = startForEveryone;
