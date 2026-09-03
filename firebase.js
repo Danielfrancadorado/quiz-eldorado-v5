@@ -10,7 +10,10 @@ import {
   limit,
   onSnapshot,
   doc,
-  updateDoc
+  updateDoc,
+  deleteDoc
+
+ }
   
 } from "https://www.gstatic.com/firebasejs/10.13.2/firebase-firestore.js";
 
@@ -38,3 +41,4 @@ window.limit = limit;
 window.onSnapshot = onSnapshot;
 window.doc = doc;
 window.updateDoc = updateDoc
+window.deleteDoc = deleteDoc;
