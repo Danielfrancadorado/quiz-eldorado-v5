@@ -194,3 +194,21 @@ select{
     text-align:center;
     margin-top:20px;
 }
+
+#clearLobbyBtn{
+    display:block;
+    margin:15px auto;
+    padding:15px 40px;
+    font-size:18px;
+    font-weight:bold;
+    border:none;
+    border-radius:10px;
+    background:#d9534f;
+    color:white;
+    cursor:pointer;
+}
+
+#clearLobbyBtn:hover{
+    background:#c9302c;
+}    
+    
